@@ -1,0 +1,6 @@
+source,technology_readiness_level,mars_operating_score,notes
+Solar PV,9,0.55,"Mature PV hardware, but Mars operation is penalized for night, dust storms, seasonal dust losses, and storage dependence."
+Fission (Kilopower-class),5,0.90,"Kilopower-class fission has relevant-environment prototype heritage and is less sensitive to Mars night and dust."
+CFS SPARC,4,0.35,"Fusion reactor concept with public SPARC performance targets, but no deployable power reactor operating record."
+Princeton FRC,3,0.30,"Fusion reactor concept at early proof-of-concept maturity with no deployable power reactor operating record."
+Avalanche Orbitron,2,0.25,"Fusion micro-reactor concept at early technology-concept maturity with no deployable power reactor operating record."

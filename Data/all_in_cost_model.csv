@@ -1,0 +1,6 @@
+source,unit_power_kw,hardware_mass_kg,deployment_mass_kg,capex_earth_M,annual_opex_M,lifetime_years,capacity_factor,notes,launch_cost_M,total_capex_M,lifetime_energy_MWh,lcoe_dollar_per_MWh,lcoe_dollar_per_kWh
+Solar PV,50,2500,500,5,0.2,15,0.25,Dust losses and long nights keep the capacity factor low.,4.5,9.5,1642.5,7610.350076103501,7.610350076103501
+Fission (Kilopower-class),40,1500,300,30,0.5,15,0.92,Modeled as a high availability baseload source.,2.7,32.7,4835.520000000001,8313.480246178278,8.313480246178278
+CFS SPARC,50000,100000,20000,5000,50.0,30,0.8,Large tokamak concept with high mass and strong scale.,180.0,5180.0,10512000.0,635.4642313546423,0.6354642313546423
+Princeton FRC,2500,5000,1000,500,10.0,20,0.75,Compact concept with midrange size and cost.,9.0,509.0,328500.0,2158.2952815829526,2.158295281582953
+Avalanche Orbitron,500,500,100,100,2.0,20,0.7,"Smallest concept, but still low TRL.",0.9,100.9,61320.0,2297.78212654925,2.29778212654925

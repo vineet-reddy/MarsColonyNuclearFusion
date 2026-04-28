@@ -1,0 +1,4 @@
+reactor,type,thermal_power_mw,net_electric_mw,plasma_gain_Q,mass_estimate_kg,trl,projected_online,source,specific_power_w_per_kg
+CFS SPARC,Tokamak,140,50.0,11,100000,4,2030,"Creely et al. 2020, J Plasma Phys",500.0
+Princeton FRC,Field-Reversed Configuration,10,2.5,5,5000,3,2035,"Cohen et al. PPPL, Direct Fusion Drive",500.0
+Avalanche Orbitron,Micro-reactor (Orbitron),1,0.5,3,500,2,2035,Avalanche Energy public specs,1000.0

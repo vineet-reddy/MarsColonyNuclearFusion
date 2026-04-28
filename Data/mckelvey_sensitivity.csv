@@ -1,0 +1,16 @@
+scenario,source,certainty,Pc,trl,mars_operating_score,category
+Pessimistic,Solar PV,0.745,0.21731650000000002,9,0.55,Prospective Resource
+Pessimistic,Fission (Kilopower-class),0.6983333333333334,0.52115748092869,5,0.9,Proved Reserve
+Pessimistic,CFS SPARC,0.445,0.31817500000000004,3,0.3,Contingent Resource
+Pessimistic,Princeton FRC,0.3583333333333333,0.19130906205923837,2,0.25,Contingent Resource
+Pessimistic,Avalanche Orbitron,0.2716666666666666,0.13320118090055985,1,0.2,Contingent Resource
+Base,Solar PV,0.745,0.21731650000000002,9,0.55,Prospective Resource
+Base,Fission (Kilopower-class),0.6983333333333334,0.52115748092869,5,0.9,Proved Reserve
+Base,CFS SPARC,0.5191666666666667,0.37769375,4,0.35,Prospective Resource
+Base,Princeton FRC,0.43249999999999994,0.2363118388575458,3,0.3,Contingent Resource
+Base,Avalanche Orbitron,0.3458333333333333,0.17388883713823833,2,0.25,Contingent Resource
+Optimistic,Solar PV,0.745,0.21731650000000002,9,0.55,Prospective Resource
+Optimistic,Fission (Kilopower-class),0.6983333333333334,0.52115748092869,5,0.9,Proved Reserve
+Optimistic,CFS SPARC,0.5933333333333333,0.4390666666666666,5,0.39999999999999997,Prospective Resource
+Optimistic,Princeton FRC,0.5066666666666667,0.28316878232251996,4,0.35,Prospective Resource
+Optimistic,Avalanche Orbitron,0.42,0.21643066004258338,3,0.3,Contingent Resource

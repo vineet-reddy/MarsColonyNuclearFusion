@@ -1,0 +1,152 @@
+% Adapted from pmichaillat/latex-presentation under the MIT License.
+
+% ---- Select text fonts -----
+
+\usefonttheme{professionalfonts}
+\usepackage{sourcesanspro}
+\DeclareRobustCommand{\sbseries}{\fontseries{sb}\selectfont}
+\DeclareTextFontCommand{\textsb}{\sbseries}
+\usepackage{sourcecodepro}
+\usepackage[T1]{fontenc}
+\urlstyle{same}
+
+% ---- Select math fonts -----
+
+\usepackage{MnSymbol}
+\usepackage[cal=euler, bb=fourier]{mathalpha}
+\newcommand{\hmmax}{0}
+\newcommand{\bmmax}{0}
+\usepackage{bm}
+\usepackage[italic, eulergreek, nolessnomore, noparenthesis, noplusnominus, noequal, nohbar]{mathastext}
+\MTsetmathskips{y}{2mu}{0mu}
+\MTsetmathskips{j}{2mu}{0mu}
+
+% ---- Select Beamer theme ----
+
+\usetheme{Boadilla}
+\usecolortheme[]{seagull}
+\setbeamercovered{transparent}
+\setbeamertemplate{navigation symbols}{}
+
+% ---- Adjust margins ----
+
+\setbeamersize{text margin left=5mm, text margin right=5mm}
+
+% ---- Adjust spacing ----
+
+\usepackage[onehalfspacing]{setspace}
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% ---- Adjust font sizes and shapes ----
+
+\setbeamerfont{title}{size=\huge, shape=\scshape}
+\setbeamerfont{author}{size=\large}
+\setbeamerfont{date}{size=\large}
+\setbeamerfont{frametitle}{shape=\scshape}
+\setbeamertemplate{frametitle}{\vskip3mm\MakeLowercase{\insertframetitle}}
+\setbeamertemplate{frametitle continuation}{[\insertcontinuationcount]}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\normalsize}
+\setbeamerfont{block title}{series=\sbseries,size=\normalsize}
+\setbeamerfont{button}{size=\footnotesize}
+
+% ---- Adjust colors ----
+
+\colorlet{BlackGray}{black!85!}
+\colorlet{DarkGray}{gray!65!}
+\colorlet{LightGray}{gray!30!}
+\setbeamercolor{title}{fg=BlackGray}
+\setbeamercolor{frametitle}{fg=BlackGray}
+\setbeamercolor{normal text}{fg=BlackGray}
+\setbeamercolor{itemize item}{fg=DarkGray}
+\setbeamercolor{itemize subitem}{fg=DarkGray}
+\setbeamercolor{itemize subsubitem}{fg=DarkGray}
+\setbeamercolor{enumerate item}{fg=DarkGray}
+\setbeamercolor{enumerate subitem}{fg=DarkGray}
+\setbeamercolor{enumerate subsubitem}{fg=DarkGray}
+\setbeamercolor{block title}{fg=BlackGray,bg=LightGray}
+\setbeamercolor{block body}{fg=BlackGray,bg=LightGray}
+\setbeamercolor{footline}{fg=DarkGray}
+\setbeamercolor{button}{fg=DarkGray, bg=white}
+
+% ---- Format title slide ----
+
+\usepackage{etoolbox}
+\newcommand*{\inserturl}{}
+\newcommand*{\paperurl}[1]{\renewcommand*{\inserturl}{#1}}
+
+\setbeamertemplate{title page}{%
+{\usebeamerfont{title}\usebeamercolor[fg]{title}\MakeLowercase{\inserttitle}\par}%
+{\color{BlackGray}\rule{\textwidth}{1.5pt}\par}%
+\vspace{1.5cm}%
+{\usebeamerfont{author}\insertauthor\par}%
+\vspace{5mm}%
+{\usebeamerfont{date}\insertdate\par}%
+\ifdefempty{\inserturl}{}{\vspace{5mm}{\color{DarkGray}\footnotesize Available at \url{\inserturl}\par}}%
+\vfill}
+
+% ---- Format lists ----
+
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{\textendash}
+\setbeamertemplate{itemize subsubitem}{\textsquare}
+\setbeamertemplate{enumerate item}[default]
+\setbeamertemplate{enumerate subitem}{\alph{enumii}.}
+\setbeamertemplate{enumerate subsubitem}{\roman{enumiii}.}
+
+% ---- Create text alerts ----
+
+\NewDocumentCommand{\al}{o m}{%
+\IfNoValueTF{#1}{\textcolor{RubineRed}{#2}}%
+{\textcolor<#1>{RubineRed}{#2}}}
+
+\NewDocumentCommand{\alg}{o m}{%
+\IfNoValueTF{#1}{\textcolor{Green}{#2}}%
+{\textcolor<#1>{Green}{#2}}}
+
+\NewDocumentCommand{\alr}{o m}{%
+\IfNoValueTF{#1}{\textcolor{Red}{#2}}%
+{\textcolor<#1>{Red}{#2}}}
+
+\NewDocumentCommand{\alb}{o m}{%
+\IfNoValueTF{#1}{\textcolor{NavyBlue}{#2}}%
+{\textcolor<#1>{NavyBlue}{#2}}}
+
+% ---- Format figures and tables ----
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\setbeamerfont{caption}{size=\footnotesize}
+\setbeamercolor{caption}{fg=DarkGray}
+\setbeamertemplate{caption}{\centering\usebeamerfont{caption}\usebeamercolor[fg]{caption}\insertcaption\par}
+\AtBeginEnvironment{figure}{\setlength{\abovecaptionskip}{-5pt}\setlength{\belowcaptionskip}{0pt}}
+\AtBeginEnvironment{table}{\setlength{\abovecaptionskip}{5pt}\setlength{\belowcaptionskip}{0pt}}
+\let\oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{\centering\oldincludegraphics[#1]{#2}}
+
+% ---- Format theorems ----
+
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\newtheorem{proposition}{Proposition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{remark}{Remark}
+
+% ---- Create section slide ----
+
+\newcommand*{\heading}[1]{\LARGE\scshape\color{BlackGray}\singlespacing\MakeLowercase{#1}}
+
+% ---- Create last slide ----
+
+\newcommand{\lastslide}{{\setbeamercolor{normal text}{bg=LightGray}\begin{frame}\end{frame}}}
+
+% ---- Remove or insert slide numbers ----
+
+\setbeamertemplate{footline}{}
+
+% ---- Define shortcuts for pictograms ----
+
+\newcommand{\up}{\textuparrow\,}
+\newcommand{\down}{\textdownarrow\,}
+\newcommand{\then}{$\rightsquigarrow\,$}
+\newcommand{\so}{{$\Rightarrow\,$}}
